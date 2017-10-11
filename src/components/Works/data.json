@@ -1,0 +1,23 @@
+[
+	{
+		"id": 1,
+		"url": "dist/me_big.jpg",
+		"title": "Сайт школы онлайн образования",
+		"description": "HTML, CSS, JAVASCRIPT",
+		"src": "https://loftschool.com/"
+		},
+	{
+		"id": 2,
+		"url": "dist/reviews.jpg",
+		"title": "Сайт интернет-магазин постельного белья",
+		"description": "HTML, CSS, JAVASCRIPT, PHP, OpenCart",
+		"src": "https://loftschool.com/"
+		},
+	{
+		"id": 3,
+		"url": "dist/logo_img.jpg",
+		"title": "Сайт-визитка енергетической компании",
+		"description": "HTML, CSS, JAVASCRIPT, PHP",
+		"src": "https://loftschool.com/"
+		}
+]

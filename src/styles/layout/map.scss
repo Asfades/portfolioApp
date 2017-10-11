@@ -1,0 +1,72 @@
+.map {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+.google-map {
+	min-height: 1000px;
+}
+.map__item {
+	width: 100%;
+	height: 1000px;
+	opacity: 0.7;
+}
+.map__data {
+	position: absolute;
+	min-height: 26%;
+	min-width: 21.1%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	display: flex;
+	background: rgba(252, 252, 252, 0.6);
+}
+.contacts {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	margin: auto;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.contacts__title {
+	align-self: center;
+}
+.contacts__list {
+	list-style: none;
+	padding: 0 15px;
+	min-height: 160px;
+	display: flex;
+	margin: auto;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.contacts-row {
+	display: inline-flex;
+	font-size: 12px;
+}
+.contacts-row__item {
+	height: 30px;
+	width: 30px;
+}
+.contacts-row__content {
+	padding-left: 10px;
+	line-height: 30px;
+	color: #abaeaf;
+}
+.contacts-row__item_skype {
+	background: url('~img/icons/skype.svg')no-repeat center / contain;
+	background-position: 100% 100%;
+}
+.contacts-row__item_mail {
+	background: url('~img/icons/envelope.svg')no-repeat center / contain;
+	background-position: 100% 100%;
+}
+.contacts-row__item_phone {
+	background: url('~img/icons/phone.svg')no-repeat center / contain;
+	background-position: 100% 100%;
+}
+.contacts-row__item_map_marker {
+	background: url('~img/icons/map_marker.svg')no-repeat center / contain;
+	background-position: 100% 100%;
+}

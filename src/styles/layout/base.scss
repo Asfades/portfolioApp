@@ -1,0 +1,31 @@
+body {
+    position: relative;
+}
+* {
+	font-size: 16px;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+li {
+	list-style: none;
+}
+@font-face {
+    font-family: rob_med ;
+    src: url("../../assets/fonts/Roboto-Medium.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: robo_reg ;
+    src: url("../../assets/fonts/Roboto-Regular.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: bernie_reg ;
+    src: url("../../assets/fonts/Bernier-Regular.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
