@@ -23,8 +23,8 @@ section.section.about
 			ul.skills-list
 				-
 					var skill_list = [
-						['HTML5','CSS3','JavaScript & JQuery','AngularJS'],
-						['PHP','mySQL','Node.js & npm','Mongo.db'],
+						['HTML5','CSS3','JavaScript & JQuery','AngularJS', 'VueJs'],
+						['PHP','Node.js & npm'],
 						['Git','Gulp','WebPack']
 					]
 					var skills = [

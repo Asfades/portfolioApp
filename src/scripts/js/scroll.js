@@ -3,7 +3,7 @@
   var set
   function skroll () {
     set = setInterval(function() {
-      window.scrollBy(0, 5)
+      window.scrollBy(0, 15)
       if (window.pageYOffset >= document.documentElement.clientHeight) {
         clearInterval(set)
       }

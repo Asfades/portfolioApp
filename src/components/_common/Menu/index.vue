@@ -44,15 +44,15 @@ export default {
 	z-index: 2;
 }
 .menu__logo__list {
-	width: 200px;
-	height: 200px;
+	width: 300px;
+	height: 220px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
 	align-items: center;
 }
 .menu__logo__link {
-	font-size: 23px;
+	font-size: 32px;
 	font-family: bernie_reg;
 }
 .menu__logo__link:hover::before {

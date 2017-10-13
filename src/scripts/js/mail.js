@@ -1,5 +1,5 @@
 (function() {
-  function sendSimpleMessage(ev) {
+  function sendMessage() {
     if (!isInputValid()) {
       console.error('validation unsuccessful contentForm')
       return
@@ -47,12 +47,12 @@
     if (emailNode.value) emailNode.value = ''
     if (messageNode.value) messageNode.value = ''
   }
-  function klik() {
+  function addEvent() {
     document.querySelector('#push').addEventListener('click', activateForm)
     document.querySelector('#clean').addEventListener('click', inputValueReset)
   }
   function activateForm() {
-    sendSimpleMessage()
+    sendMessage()
   }
-  if (document.querySelector('#push')) document.addEventListener('DOMContentLoaded', klik)
+  if (document.querySelector('#push')) document.addEventListener('DOMContentLoaded', addEvent)
 }())
