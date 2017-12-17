@@ -1,21 +1,11 @@
 const works = {
+  namespaced: true,
   state: {
-    data: []
-  },
-  getters: {
-    works: ({ data }) => (data)
-  },
-  mutations: {
-
+    data: {}
   },
   actions: {
-    fetchWorks({ state, rootGetters }) {
-      const { $http } = rootGetters
-      $http.get('Works/data.json').then(response => {
-        state.data = response.body
-      }, response => {
-        console.error(response)
-      })
+    addNewWork({ state, rootGetters }, fields) {
+      console.log(fields)
     }
   }
 }

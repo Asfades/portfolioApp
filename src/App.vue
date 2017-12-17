@@ -1,6 +1,5 @@
 <template lang="pug">
-  .wrapper
-      router-view
+  router-view
 </template>
 
 <script>

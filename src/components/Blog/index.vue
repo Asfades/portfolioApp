@@ -1,5 +1,5 @@
 <template lang="pug">
-  div
+  .wrapper
     section.section.hero
       .hero__socials
         ul.socials

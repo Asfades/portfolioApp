@@ -1,9 +1,6 @@
 body {
     position: relative;
 }
-* {
-	font-size: 16px;
-}
 a{
     text-decoration: none;
     color: white;
@@ -28,4 +25,32 @@ li {
     src: url("../../assets/fonts/Bernier-Regular.ttf");
     font-weight: normal;
     font-style: normal;
+}
+.admin {    
+  display: flex;
+  flex-direction: column;
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+  line-height: 1.42;
+  font-weight: 500;
+  margin: 0;
+  color: #455a64;  
+  & * {
+    box-sizing: border-box;
+  }
+  & h1,& h2,& h3,& h4,& h5,& h6 {
+    margin: 0;
+    font-weight: normal;
+  }
+  .title {
+    margin-bottom: 20px;
+  }
+  .content {
+    flex: 1;
+    background: url('~img/bg.jpg') center center no-repeat;
+    background-size: cover;
+    padding: 45px 25px;
+  }
 }

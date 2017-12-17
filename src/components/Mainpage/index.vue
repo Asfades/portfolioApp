@@ -1,5 +1,5 @@
 <template lang="pug">
-div
+.wrapper
   App-logo
   aboutme
   App-map

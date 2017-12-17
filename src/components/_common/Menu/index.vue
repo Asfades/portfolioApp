@@ -36,7 +36,7 @@ export default {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background: url('~img/bg.jpg')no-repeat center / cover;
+	background: url('~img/bg-menu.jpg')no-repeat center / cover;
 	z-index: 1;
 	position: fixed;
 }

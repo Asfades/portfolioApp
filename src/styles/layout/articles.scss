@@ -10,7 +10,6 @@
   transform: translate(-50%, -50%);
   background: url('~img/icons/blog_header.svg') no-repeat center / contain;
   opacity: 0.2;
-  // z-index: 1;
 }
 
 
@@ -72,7 +71,6 @@
 	border-right: 2px solid rgba(27, 182, 150, 0);
 }
 .nav__item:hover {
-	border-right: 2px solid rgba(27, 182, 150, 1);
 	color: #1bb696;
 	cursor: pointer;
 }

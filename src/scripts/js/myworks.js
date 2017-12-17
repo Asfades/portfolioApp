@@ -9,29 +9,27 @@
 
   var srcData = ['dist/me_big.jpg', 'dist/reviews.jpg', 'dist/logo_img.jpg']
 
-  var descrData	= [
-    {
-      contentTitle: 'Сайт школы онлайн образования',
-      contentDescription: 'HTML, CSS, JAVASCRIPT',
-      contentBtn: 'https://loftschool.com/'
-    },
-    {
-      contentTitle: 'Сайт интернет-магазин постельного белья',
-      contentDescription: 'HTML, CSS, JAVASCRIPT, PHP, OpenCart',
-      contentBtn: 'https://loftschool.com/'
-    },
-    {
-      contentTitle: 'Сайт-визитка енергетической компании',
-      contentDescription: 'HTML, CSS, JAVASCRIPT, PHP',
-      contentBtn: 'https://loftschool.com/'
-    }
-  ]
+  var descrData = [{
+    contentTitle: 'Сайт школы онлайн образования',
+    contentDescription: 'HTML, CSS, JAVASCRIPT',
+    contentBtn: 'https://loftschool.com/'
+  },
+  {
+    contentTitle: 'Сайт интернет-магазин постельного белья',
+    contentDescription: 'HTML, CSS, JAVASCRIPT, PHP, OpenCart',
+    contentBtn: 'https://loftschool.com/'
+  },
+  {
+    contentTitle: 'Сайт-визитка енергетической компании',
+    contentDescription: 'HTML, CSS, JAVASCRIPT, PHP',
+    contentBtn: 'https://loftschool.com/'
+  }]
 
   var prevNum = srcData.length - 1
   var viewNum = 0
   var nextNum = 1
 
-  function showImg () {
+  function showImg() {
     prev.style = `background-image: url( ${srcData[prevNum]} )`
     view.style = `background-image: url( ${srcData[viewNum]} )`
     next.style = `background-image: url( ${srcData[nextNum]} )`
@@ -41,7 +39,7 @@
     contentBtn.setAttribute('href', descrData[viewNum].contentBtn)
   }
 
-  function setupListeners () {
+  function setupListeners() {
     next.onclick = function() {
       prevNum += 1
       viewNum += 1
@@ -52,21 +50,18 @@
       showImg()
     }
     prev.onclick = function() {
-      if (prevNum === 0) {
-        prevNum = (srcData.length - 1)
-      } else prevNum -= 1
-      if (viewNum === 0) {
-        viewNum = (srcData.length - 1)
-      } else viewNum -= 1
-      if (nextNum === 0) {
-        nextNum = (srcData.length - 1)
-      } else nextNum -= 1
+      (prevNum === 0) ? prevNum = (srcData.length - 1)
+        : prevNum -= 1;
+      (viewNum === 0) ? viewNum = (srcData.length - 1)
+        : viewNum -= 1;
+      (nextNum === 0) ? nextNum = (srcData.length - 1)
+        : nextNum -= 1
 
       showImg()
     }
   }
 
-  function init () {
+  function init() {
     showImg()
 
     setupListeners()
