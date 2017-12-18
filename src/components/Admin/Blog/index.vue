@@ -40,7 +40,7 @@
                 td {{post.text}}
 </template>
 <script>
-import { mapGetters, mapMutations } from 'vuex'
+import { mapActions, mapGetters, mapMutations } from 'vuex'
 export default {
   data: () => ({
     fields: {
@@ -50,6 +50,7 @@ export default {
     }
   }),
   methods: {
+    ...mapActions('posts', ['fetchPosts']),
     ...mapMutations('posts', ['addBlogPost']),
     addPost() {
       const fieldsData = _.clone(this.fields)
@@ -60,7 +61,7 @@ export default {
     ...mapGetters('posts', ['posts'])
   },
   mounted() {
-
+    this.fetchPosts()
   },
   components: {
     AppButton: require('_common/Button'),
