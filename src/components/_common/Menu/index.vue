@@ -6,7 +6,8 @@ nav.menu__logo
 				['works', 'Мои работы', '/works'],
 				['aboutme', 'Обо мне', '/mainpage'],
 				['blog', 'Блог', '/blog'],
-				['login', 'Авторизация', '/']
+				['login', 'Авторизация', '/'],
+				['admin', 'Админ-панель', '/admin']
 			]
 		each item in menu
 				.menu__logo__item
