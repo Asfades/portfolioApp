@@ -22,6 +22,12 @@
               v-model="fields.tech"
             )
           .row
+            app-input(
+              placeholder="Ссылка на проект"
+              type="text"
+              v-model="fields.link"
+            )
+          .row
             label.upload
               input.type-file(
                 type="file"
@@ -39,7 +45,7 @@
 </template>
 <script>
 import { Validator } from 'simple-vue-validator'
-import { mapActions } from 'vuex'
+import { mapActions, mapGetters, mapMutations } from 'vuex'
 
 export default {
   mixins: [require('simple-vue-validator').mixin],
@@ -60,11 +66,13 @@ export default {
     fields: {
       title: '',
       tech: '',
+      link: '',
       file: null
     }
   }),
   methods: {
-    ...mapActions('works', ['addNewWork']),
+    ...mapActions('works', ['addNewWork', 'fetchWorks']),
+    ...mapMutations('works', ['addNewWork', 'removeSavedWorks']),
     getFile(event) {
       const file = event.target.files[0]
       this.fields.file = file
@@ -82,6 +90,12 @@ export default {
         this.addNewWork(formData)
       })
     }
+  },
+  computed: {
+    ...mapGetters('works', ['works'])
+  },
+  mounted() {
+    this.fetchWorks()
   },
   components: {
     AppInput: require('_common/Input'),

@@ -1,19 +1,19 @@
 [
   {
     "id": 1,
-    "name": "Html",
+    "name": "HTML5",
     "percents": 10,
     "type": 1
   },
   {
     "id": 2,
-    "name": "CSS",
+    "name": "CSS3",
     "percents": 20,
     "type": 1
   },
   {
     "id": 3,
-    "name": "javaScript",
+    "name": "JavaScript & JQuery",
     "percents": 30,
     "type": 1
   },
@@ -31,19 +31,19 @@
   },
   {
     "id": 6,
-    "name": "Bower",
+    "name": "WebPack",
     "percents": 60,
     "type": 2
   },
   {
     "id": 7,
-    "name": "Php",
+    "name": "PHP",
     "percents": 70,
     "type": 3
   },
   {
     "id": 8,
-    "name": "Node.js",
+    "name": "Node.js & npm",
     "percents": 80,
     "type": 3
   },
@@ -52,5 +52,17 @@
     "name": "Mongo.db",
     "percents": 90,
     "type": 3
+  },
+  {
+    "id": 10,
+    "name": "AngularJS",
+    "percents": 70,
+    "type": 1
+  },
+  {
+    "id": 11,
+    "name": "VueJs",
+    "percents": 53,
+    "type": 1
   }
 ]
