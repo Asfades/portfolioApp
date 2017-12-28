@@ -6,7 +6,6 @@
   App-footer
 </template>
 <script>
-import { mapGetters, mapMutations } from 'vuex'
 export default {
   data: () => ({
     fields: {
@@ -16,17 +15,12 @@ export default {
     }
   }),
   methods: {
-    ...mapMutations('posts', ['addBlogPost']),
     addPost() {
       const fieldsData = _.clone(this.fields)
       this.addBlogPost(fieldsData)
     }
   },
   computed: {
-    ...mapGetters('posts', ['posts'])
-  },
-  mounted() {
-
   },
   components: {
     AppLogo: require('../_common/Logo'),
