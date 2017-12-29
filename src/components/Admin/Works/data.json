@@ -2,16 +2,19 @@
   {
     "contentTitle": "Сайт школы онлайн образования",
     "contentDescription": "HTML, CSS, JAVASCRIPT",
-    "contentBtn": "https://loftschool.com/"
+    "contentBtn": "https://loftschool.com/",
+    "imgLink": "dist/me_big.jpg"
   },
   {
     "contentTitle": "Сайт интернет-магазин постельного белья",
     "contentDescription": "HTML, CSS, JAVASCRIPT, PHP, OpenCart",
-    "contentBtn": "https://loftschool.com/"
+    "contentBtn": "https://loftschool.com/",
+    "imgLink": "dist/reviews.jpg"
   },
   {
     "contentTitle": "Сайт-визитка енергетической компании",
     "contentDescription": "HTML, CSS, JAVASCRIPT, PHP",
-    "contentBtn": "https://loftschool.com/"
+    "contentBtn": "https://loftschool.com/",
+    "imgLink": "dist/logo_img.jpg"
   }
 ]

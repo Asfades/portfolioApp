@@ -18,14 +18,18 @@ export default {
 
   }),
   props: {
-    works: Array
-  },
-  created() {
-
+    worksView: Object,
+    worksPrev: Object,
+    worksNext: Object
   },
   methods: {
     helo () {
     }
+  },
+  mounted () {
+    console.log(this.worksView)
+    console.log(this.worksPrev)
+    console.log(this.worksNext)
   },
   components: {
 

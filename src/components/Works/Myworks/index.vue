@@ -6,10 +6,14 @@ section.section.myworks
       .block-title Мои работы
   .myworks__blocks-wrap
     App-Slidedescription(
-      :works='works'
+      :worksView='works[0]'
+      :worksPrev='works[2]'
+      :worksNext='works[1]'
     )
     App-slideimg(
-      :works='works'
+      :worksView='works[0]'
+      :worksPrev='works[2]'
+      :worksNext='works[1]'
     )
 </template>
 
@@ -22,10 +26,10 @@ export default {
 
   }),
   computed: {
-    ...mapGetters(['works'])
+    ...mapGetters('works', ['works'])
   },
   methods: {
-    ...mapActions(['fetchWorks'])
+    ...mapActions('works', ['fetchWorks'])
   },
   created() {
     this.fetchWorks()

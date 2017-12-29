@@ -7,7 +7,7 @@ section.section.hero
 				var socials = [
 					['fb','https://www.facebook.com/profile.php?id=100008099054335'],
 					['github','https://github.com/YevheniiGurinets'],
-					['in','https://github.com/YevheniiGurinets']
+					['in','https://www.linkedin.com/in/yevhenii-gurinets/']
 				]
 			each item in socials
 				li.socials__item
