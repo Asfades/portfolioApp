@@ -2,34 +2,38 @@
 .myworks__block.myworks__left
 	.myworks__left-content
 		.myworks__content__title
-			.block-subtitle Сайт школы онлайн образования
+			.block-subtitle {{ workContentTitle }}
 		.myworks__content__description
-			.myworks-description HTML, CSS, JAVASCRIPT
+			.myworks-description {{ workContentDescription }}
 		.myworks__content__button
 			a(href="#" target="_blank").myworks-btn
 				.myworks-btn__img
-				.myworks-btn__text Посмотреть сайт
+				.myworks-btn__text {{ workContentBtn }}
 </template>
 
 <script>
 
 export default {
   data: () => ({
-
+    workContentTitle: '',
+    workContentDescription: '',
+    workContentBtn: ''
   }),
-  props: {
-    worksView: Object,
-    worksPrev: Object,
-    worksNext: Object
-  },
-  methods: {
-    helo () {
+  watch: {
+    worksView: function () {
+      this.workContentTitle = this.worksView.contentTitle
+      this.workContentDescription = this.worksView.contentDescription
+      this.workContentBtn = this.worksView.contentBtn
     }
   },
+  props: {
+    worksView: Object
+  },
+  methods: {
+
+  },
   mounted () {
-    console.log(this.worksView)
-    console.log(this.worksPrev)
-    console.log(this.worksNext)
+
   },
   components: {
 
