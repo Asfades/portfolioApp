@@ -6,12 +6,14 @@ section.section.myworks
       .block-title Мои работы
   .myworks__blocks-wrap
     App-Slidedescription(
-      :worksView='works[0]'
+      :worksView='works[viewNum]'
     )
     App-slideimg(
-      :worksView='works[0]'
-      :worksPrev='works[2]'
-      :worksNext='works[1]'
+      :worksView='works[viewNum]'
+      :worksPrev='works[prevNum]'
+      :worksNext='works[nextNum]'
+      :clickPrev='prevClick'
+      :clickNext='nextClick'
     )
 </template>
 
@@ -22,15 +24,14 @@ import { mapActions, mapGetters } from 'vuex'
 export default {
   data: () => ({
     work: ['', '', ''],
-    prevNum: this.work.length - 1,
+    prevNum: '',
     viewNum: 0,
     nextNum: 1
   }),
   watch: {
     works: function () {
       this.work = this.works
-      console.log(this.work)
-      console.log(this.works)
+      this.prevNum = this.work.length - 1
     }
   },
   computed: {
@@ -57,7 +58,6 @@ export default {
   },
   created() {
     this.fetchWorks()
-    console.log(this.work)
   },
   components: {
     AppSlidedescription: require('./Slidedescription'),
