@@ -17,7 +17,10 @@ export default {
   data: () => ({
     workView: '',
     workPrev: '',
-    workNext: ''
+    workNext: '',
+    viewStyle: '',
+    prevStyle: '',
+    nextStyle: ''
   }),
   watch: {
     worksView: function () {
@@ -33,7 +36,9 @@ export default {
   props: {
     worksView: Object,
     worksPrev: Object,
-    worksNext: Object
+    worksNext: Object,
+    clickPrev: Function,
+    clickNext: Function
   },
   methods: {
     slideUp() {

@@ -16,5 +16,11 @@
     "contentDescription": "HTML, CSS, JAVASCRIPT, PHP",
     "contentBtn": "https://loftschool.com/",
     "imgLink": "dist/logo_img.jpg"
+  },
+  {
+    "contentTitle": "Title Default",
+    "contentDescription": "HTML, CSS, JAVASCRIPT, PHP",
+    "contentBtn": "https://loftschool.com/",
+    "imgLink": "/dist/reviewsPhoto-1.jpg"
   }
 ]

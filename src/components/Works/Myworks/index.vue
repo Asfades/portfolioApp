@@ -6,7 +6,7 @@ section.section.myworks
       .block-title Мои работы
   .myworks__blocks-wrap
     App-Slidedescription(
-      :worksView='works[0]'
+      :worksView='works[viewNum]'
     )
     App-slideimg(
       :worksView='works[viewNum]'
@@ -51,7 +51,6 @@ export default {
   },
   created() {
     this.fetchWorks()
-    console.log(this.work)
   },
   components: {
     AppSlidedescription: require('./Slidedescription'),
