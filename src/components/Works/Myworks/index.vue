@@ -9,9 +9,11 @@ section.section.myworks
       :worksView='works[0]'
     )
     App-slideimg(
-      :worksView='works[0]'
-      :worksPrev='works[2]'
-      :worksNext='works[1]'
+      :worksView='works[viewNum]'
+      :worksPrev='works[prevNum]'
+      :worksNext='works[nextNum]'
+      @slideUp="nextClick()"
+      @slideDown="prevClick()"
     )
 </template>
 
@@ -21,38 +23,30 @@ import { mapActions, mapGetters } from 'vuex'
 
 export default {
   data: () => ({
-    work: ['', '', ''],
-    prevNum: this.work.length - 1,
+    prevNum: 2,
     viewNum: 0,
     nextNum: 1
   }),
-  watch: {
-    works: function () {
-      this.work = this.works
-      console.log(this.work)
-      console.log(this.works)
-    }
-  },
   computed: {
     ...mapGetters('works', ['works'])
   },
   methods: {
     ...mapActions('works', ['fetchWorks']),
     prevClick () {
-      (this.prevNum === 0) ? this.prevNum = (this.work.length - 1)
+      (this.prevNum === 0) ? this.prevNum = (this.works.length - 1)
         : this.prevNum -= 1;
-      (this.viewNum === 0) ? this.viewNum = (this.work.length - 1)
+      (this.viewNum === 0) ? this.viewNum = (this.works.length - 1)
         : this.viewNum -= 1;
-      (this.nextNum === 0) ? this.nextNum = (this.work.length - 1)
+      (this.nextNum === 0) ? this.nextNum = (this.works.length - 1)
         : this.nextNum -= 1
     },
     nextClick () {
       this.prevNum += 1
       this.viewNum += 1
       this.nextNum += 1
-      if (this.prevNum === this.work.length) this.prevNum = 0
-      if (this.viewNum === this.work.length) this.viewNum = 0
-      if (this.nextNum === this.work.length) this.nextNum = 0
+      if (this.prevNum === this.works.length) this.prevNum = 0
+      if (this.viewNum === this.works.length) this.viewNum = 0
+      if (this.nextNum === this.works.length) this.nextNum = 0
     }
   },
   created() {

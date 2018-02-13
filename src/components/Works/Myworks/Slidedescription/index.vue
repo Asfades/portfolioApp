@@ -6,9 +6,9 @@
 		.myworks__content__description
 			.myworks-description {{ workContentDescription }}
 		.myworks__content__button
-			a(href="#" target="_blank").myworks-btn
+			a(:href="workContentBtn" target="_blank").myworks-btn
 				.myworks-btn__img
-				.myworks-btn__text {{ workContentBtn }}
+				.myworks-btn__text Перейти на сайт
 </template>
 
 <script>
