@@ -23,10 +23,15 @@ import { mapActions, mapGetters } from 'vuex'
 
 export default {
   data: () => ({
-    prevNum: 2,
+    prevNum: Number,
     viewNum: 0,
     nextNum: 1
   }),
+  watch: {
+    works: function () {
+      this.prevNum = this.works.length - 1
+    }
+  },
   computed: {
     ...mapGetters('works', ['works'])
   },
